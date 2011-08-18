@@ -62,7 +62,7 @@ public class ViewFlow extends AdapterView<Adapter> {
 	private float mLastMotionX;
 	private int mTouchSlop;
 	private int mMaximumVelocity;
-	private int mCurrentScreen;
+	public int mCurrentScreen;
 	private int mNextScreen = INVALID_SCREEN;
 	private boolean mFirstLayout = true;
 	private ViewSwitchListener mViewSwitchListener;
@@ -398,7 +398,7 @@ public class ViewFlow extends AdapterView<Adapter> {
 		snapToScreen(whichScreen);
 	}
 
-	private void snapToScreen(int whichScreen) {
+	public void snapToScreen(int whichScreen) {
 		mLastScrollDirection = whichScreen - mCurrentScreen;
 		if (!mScroller.isFinished())
 			return;
